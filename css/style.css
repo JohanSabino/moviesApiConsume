@@ -1,0 +1,94 @@
+/*MOVIES*/
+
+header a {
+  text-decoration: none;
+  color: #1b253c;
+  font-size: 25px;
+}
+
+header a:hover {
+  text-decoration: none;
+  color: #d1f6f7;
+  font-size: 25px;
+}
+
+header h1,
+h2 {
+  text-align: center;
+  color: #d1f6f7;
+}
+
+.appMovies {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto 100px auto;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+}
+.Apis {
+  display: block;
+  width: 100%;
+}
+
+.Apis ul li {
+  position: relative;
+  list-style: none;
+  text-decoration: none;
+}
+.appMovies .movie {
+  text-align: center;
+  color: #d1f6f7;
+}
+
+.appMovies .movie .title {
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid #4d6099;
+  background-color: rgb(16, 10, 31, 0.5);
+  border-radius: 15%;
+  padding: 7px;
+}
+
+.appMovies .movie .poster {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 15px;
+}
+
+.pages {
+  position: fixed;
+  bottom: 0;
+  background: #1b253c;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.pages button {
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 50px;
+  width: 200px;
+  background: #1b253c;
+  color: #fff;
+  border-radius: 100px;
+  font-family: "Abril Fatface", cursive;
+  font-family: "Arvo", serif;
+  font-weight: 600;
+  transition: 0.3s ease all;
+  border: 1px solid #87a5fb;
+}
+
+.pages button:hover {
+  background: #4d6099;
+  letter-spacing: 3px;
+}
+/*FINAL MOVIES*/
