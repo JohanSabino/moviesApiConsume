@@ -1,8 +1,5 @@
 * {
-  background-color: darkgreen;
-  background-color: #323133;
-  background-color: #7a787e;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23FFFFFF'/%3E%3Cstop offset='1' stop-color='%237A787E'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%23FFFFFF' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23FFFFFF' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.11'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
+  background-color: #0d253f;
   background-attachment: fixed;
   background-size: cover;
   background-attachment: fixed;
@@ -30,23 +27,39 @@
 .color5 {
   color: #f7f4f9;
 }
+.color6 {
+  color: #0d253f;
+}
+.color7 {
+  color: #01b4e4;
+}
+.color8 {
+  color: #90cea1;
+}
 /*MOVIES*/
 
 header a {
+  font-size: 20px;
   text-decoration: none;
-  color: #232531;
-  font-size: 25px;
+  background: -webkit-linear-gradient(right, #90cea1, #01b4e4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 header a:hover {
   text-decoration: none;
-  color: #6f7082;
-  font-size: 25px;
+  font-size: 20px;
+  background: -webkit-linear-gradient(right, #0d253f, #01b4e4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 header h1,
 h2 {
   text-align: center;
-  color: #232531;
+  background: -webkit-linear-gradient(right, #90cea1, #01b4e4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
 }
 
 .appMovies {
@@ -55,12 +68,13 @@ h2 {
   margin: 40px auto 100px auto;
 
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px;
 }
 .Apis {
   display: block;
   width: 100%;
+  box-sizing: content-box;
 }
 
 .Apis ul li {
@@ -68,34 +82,42 @@ h2 {
   list-style: none;
   text-decoration: none;
 }
-.appMovies .movie {
+
+.movie h3 {
   text-align: center;
-  color: #000000;
+  background: -webkit-linear-gradient(right, #90cea1, #01b4e4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-sizing: border-box;
+  border-radius: 10px;
+  transition: 0.3s;
 }
-.appMovies .movie:hover {
+.movie:hover {
   text-align: center;
-  color: #6f7082;
+  background: -webkit-linear-gradient(right, #90cea1, #01b4e4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.8px;
+  border-radius: 10px;
 }
 
 .appMovies .movie .title {
   font-size: 16px;
   font-weight: 600;
-  border: 1px solid #4d6099;
-  background-color: rgb(16, 10, 31, 0.5);
-  border-radius: 15%;
   padding: 7px;
+  height: 60px;
 }
 
 .appMovies .movie .poster {
   width: 100%;
-  margin-bottom: 10px;
-  border-radius: 15px;
+  margin-bottom: 0px;
+  border-radius: 10px;
 }
 
 .pages {
   position: fixed;
   bottom: 0;
-  background: #1b253c;
+  background: #0d253f;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -112,8 +134,10 @@ h2 {
   text-align: center;
   height: 50px;
   width: 200px;
-  background: #1b253c;
-  color: #fff;
+  background: #0d253f;
+  background: -webkit-linear-gradient(right, #90cea1, #01b4e4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   border-radius: 100px;
   font-family: "Abril Fatface", cursive;
   font-family: "Arvo", serif;
@@ -123,7 +147,10 @@ h2 {
 }
 
 .pages button:hover {
-  background: #4d6099;
+  background: #0d253f;
+  background: -webkit-linear-gradient(right, #90cea1, #01b4e4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   letter-spacing: 3px;
 }
 /*FINAL MOVIES*/

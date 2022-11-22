@@ -31,7 +31,7 @@ const loadMovies = async () => {
             <div class ="movie">
                 <img class = "poster" src="https://image.tmdb.org/t/p/w500/${movie.poster_path}
 ">  <h3 class="title">${movie.title}</h3>
-            </div>`;
+            <a href = </div>`;
       });
 
       document.getElementById("appMovies").innerHTML = movies;
