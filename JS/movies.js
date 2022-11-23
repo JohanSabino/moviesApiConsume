@@ -1,6 +1,7 @@
 let page = 1;
 const btnBefore = document.getElementById("btnBefore");
 const btnAfter = document.getElementById("btnAfter");
+const extMovies = document.getElementById("appMovies");
 
 btnBefore.addEventListener("click", () => {
   if (page > 1) {
@@ -21,7 +22,6 @@ const loadMovies = async () => {
     const response = await fetch(
       `https://api.themoviedb.org/3/movie/popular?api_key=8e45e8e71015c62c3beb036346e9ebd9&language=es-MX&page=${page}`
     );
-    console.log(response);
     if (response.status === 200) {
       const data = await response.json();
       let movies = "";
@@ -42,8 +42,7 @@ const loadMovies = async () => {
     console.log(error);
   }
 };
-
+loadMovies();
+//
 // siempre que uso Async away usar TRY y CATCH()
 //200 ok, 401 error en API y 404 no halló movie.
-
-loadMovies();
