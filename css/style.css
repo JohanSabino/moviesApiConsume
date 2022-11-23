@@ -1,4 +1,4 @@
-* {
+body {
   background-color: #0d253f;
   background-attachment: fixed;
   background-size: cover;
@@ -10,6 +10,7 @@
   background-attachment: fixed;
   font-family: "Abril Fatface", cursive;
   font-family: "Arvo", serif;
+  z-index: 1;
 }
 
 .color1 {
@@ -49,7 +50,7 @@ header a {
 header a:hover {
   text-decoration: none;
   font-size: 20px;
-  background: -webkit-linear-gradient(right, #0d253f, #01b4e4);
+  background: -webkit-linear-gradient(right, #01b4e4, #90cea1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -63,58 +64,109 @@ h2 {
 }
 
 .appMovies {
-  width: 90%;
-  max-width: 1000px;
-  margin: 40px auto 100px auto;
-
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
-}
-.Apis {
-  width: 100%;
-  box-sizing: content-box;
+  max-width: 100%;
+  margin: 40px auto 0px auto;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+  justify-content: space-evenly;
+  align-items: flex-end;
 }
 
-.Apis ul li {
+.movie {
   position: relative;
-  list-style: none;
-  text-decoration: none;
+  width: 20%;
+  height: 610px;
+  padding: 0;
+  margin-top: 20px;
+  cursor: pointer;
+  margin-bottom: 50px;
 }
 
-.movie h3 {
+.poster {
+  position: absolute;
+  width: 92%;
+  padding: 0;
+  margin: 0px;
+  cursor: pointer;
+  z-index: -1;
+  border-radius: 10px;
+  transition: 0.3s;
+  height: 92%;
+}
+.movie:hover .poster {
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  margin: auto;
+  cursor: pointer;
+  z-index: -1;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.pmovie {
+  position: absolute;
+  top: 200px;
+  margin: 0 20px;
+  width: 80%;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  color: #ffff;
+  text-align: justify;
+  padding: 5px;
+  visibility: hidden;
+  transition: 0.2s;
+}
+.movie:hover .pmovie {
+  position: absolute;
+  top: 200px;
+  width: 85%;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  color: #ffff;
+  text-align: justify;
+  padding: 5px;
+  visibility: visible;
+  transition: all 300ms ease;
+}
+
+.title {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  padding: 0 50px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 0;
+}
+.title h3 {
   text-align: center;
   background: -webkit-linear-gradient(right, #90cea1, #01b4e4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  box-sizing: border-box;
-  border-radius: 10px;
   transition: 0.3s;
+  padding: 0%;
+  margin: 0;
 }
-.movie:hover {
+
+.movie:hover .title h3 {
   text-align: center;
   background: -webkit-linear-gradient(right, #90cea1, #01b4e4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: 0.8px;
-  border-radius: 10px;
 }
 
-.appMovies .movie .title {
+.appMovies .movie h3 {
   font-size: 16px;
   font-weight: 600;
-  padding: 7px;
-  height: 60px;
-}
-
-.appMovies .movie .poster {
-  width: 100%;
-  margin-bottom: 0px;
-  border-radius: 10px;
 }
 
 .pages {
-  position: fixed;
+  position: scroll;
   bottom: 0;
   background: #0d253f;
   width: 100%;
@@ -133,6 +185,7 @@ h2 {
   text-align: center;
   height: 50px;
   width: 200px;
+  margin-top: 0;
   background: #0d253f;
   background: -webkit-linear-gradient(right, #90cea1, #01b4e4);
   -webkit-background-clip: text;

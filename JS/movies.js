@@ -25,12 +25,11 @@ const loadMovies = async () => {
     if (response.status === 200) {
       const data = await response.json();
       let movies = "";
-
       data.results.forEach((movie) => {
         movies += `
             <div class ="movie">
-                <img class = "poster" src="https://image.tmdb.org/t/p/w500/${movie.poster_path}
-">  <h3 class="title">${movie.title}</h3> </div>`;
+               <div> <img class = "poster" src="https://image.tmdb.org/t/p/w500/${movie.poster_path}
+"> </div><div class="pmovie"><p>${movie.overview}</p> </div> <div class ="title"><h3>${movie.title}</h3></div></div>`;
       });
 
       document.getElementById("appMovies").innerHTML = movies;
