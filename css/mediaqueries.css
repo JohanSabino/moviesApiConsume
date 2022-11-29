@@ -23,7 +23,8 @@
 
   html,
   body {
-    width: 100%;
+    width: 100% !important;
+    overflow-x: hidden !important;
   }
 
   header {
@@ -66,7 +67,7 @@
     max-width: 100%;
     margin: auto;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column 4 row 6;
     gap: 10px;
     justify-content: baseline;
     align-items: flex-end;
