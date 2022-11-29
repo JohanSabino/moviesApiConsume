@@ -28,8 +28,16 @@ const loadMovies = async () => {
       data.results.forEach((movie) => {
         movies += `
             <div class ="movie">
-               <div> <img class = "poster" src="https://image.tmdb.org/t/p/w500/${movie.poster_path}
-"> </div><div class="pmovie"><p>${movie.overview}</p> </div> <div class ="title"><h3>${movie.title}</h3></div></div>`;
+              <div> <img class = "poster" src="https://image.tmdb.org/t/p/w500/${movie.poster_path}">
+            </div>
+              <div class="pmovie">
+                <p>${movie.overview}</p> 
+              </div>
+                <div class ="title">
+                  <h3>${movie.title}
+                  </h3>
+                </div>
+            </div>`;
       });
 
       document.getElementById("appMovies").innerHTML = movies;
